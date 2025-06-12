@@ -1,5 +1,8 @@
 # Simple QR Code Generator - Translated to German
 
+Largely based on [this project from pjanczyk](https://github.com/pjanczyk/qr-code-generator), but with major changes and cleanup to get it to actually work.
+Deployment locally via docker is now working and SVGs now dont throw an error. Minor changes in the UI too.
+
 <img src="docs/screenshot.png" width="600"/>
 
 _**web**_ is a web application written in Spring and Kotlin. It uses Thymeleaf for server-side rendering.
@@ -25,8 +28,12 @@ cd qr-code-generator-german
 ```bash
 docker compose up --build -d
 ```
-The Web-UI will be published on Port 3007, so go top http://[IP-of-Host]:3007 to access it
+The Web-UI will be published on Port 3007, so go to http://[IP-of-Host]:3007 to access it
 
+If you want to use a different port, use this:
+```bash
+HOST_PORT=YOUR-FAVORITE-PORT docker compose up --build -d
+```
 
 Ignore this, its just for reinstalling:
 ```bash
