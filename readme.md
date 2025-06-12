@@ -2,10 +2,6 @@
 
 <img src="docs/screenshot.png" width="600"/>
 
-### Architecture
-
-<img src="docs/architecture-diagram.png" width="600"/>
-
 _**web**_ is a web application written in Spring and Kotlin. It uses Thymeleaf for server-side rendering.
 
 Both services are dockerized.
