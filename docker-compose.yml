@@ -2,12 +2,12 @@ version: "3.0"
 
 services:
   qr-code-service:
-    build: qr-code-service
-    image: pjanczyk/qr-code-generator_web
+    build: ./qr-code-service
+    image: pjanczyk/qr-code-generator_qr-code-service
 
   web:
-    build: web
-    image: pjanczyk/qr-code-generator_qr-code-service
+    build: ./web
+    image: pjanczyk/qr-code-generator_web
     ports:
       - "3007:80"
     environment:
