@@ -6,9 +6,7 @@ Deployment locally via docker is now working and SVGs now dont throw an error. M
 <img src="docs/screenshot.png" width="600"/>
 
 _**web**_ is a web application written in Spring and Kotlin. It uses Thymeleaf for server-side rendering.
-
 Both services are dockerized.
-Docker Compose configuration is used for deployment on AWS Elastic Container Service.
 
 ### UI Design
 
