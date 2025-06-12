@@ -26,7 +26,7 @@ Docker Compose configuration is used for deployment on AWS Elastic Container Ser
 2. **Clone the Repository and build the image** using the following commands:
 
 ```bash
-https://github.com/FlyingT/qr-code-generator-german.git
+git clone https://github.com/FlyingT/qr-code-generator-german.git
 ```
 ```bash
 cd qr-code-generator-german
