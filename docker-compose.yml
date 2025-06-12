@@ -9,7 +9,7 @@ services:
     build: ./web
     image: pjanczyk/qr-code-generator_web
     ports:
-      - "3007:80"
+      - "${HOST_PORT:-3007}:80"
     environment:
-      QR_CODE_GENERATOR_BASE_URL: http://0.0.0.0:3007
+      QR_CODE_GENERATOR_BASE_URL: http://0.0.0.0:${HOST_PORT:-3007}
       QR_CODE_GENERATOR_QR_CODE_SERVICE_ADDRESS: qr-code-service:5000
