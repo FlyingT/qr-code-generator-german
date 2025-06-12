@@ -266,7 +266,7 @@
 
   <form class="panels" method="get">
     <div class="panels__left">
-      <textarea class="multiline-text-input" name="data" placeholder="hier Text eingeben"
+      <textarea class="multiline-text-input" name="data" placeholder="Text / Link hier eingeben"
                 th:text="${definition.data}"></textarea>
       <button type="submit" class="button button-generate">QR Code erstellen</button>
 
@@ -318,10 +318,10 @@
       </div>
 
       <div class="field">
-        <label for="version-input">QR Code Version (1–40)</label>
+        <label for="version-input">QR-Version (1–40)</label>
         <div class="input text-input">
           <input id="version-input" type="number" pattern="[0-9]*" min="1" step="1" max="40" name="version"
-                 placeholder="auto" th:value="${definition.version}"/>
+                 placeholder="automatisch" th:value="${definition.version}"/>
         </div>
       </div>
 
