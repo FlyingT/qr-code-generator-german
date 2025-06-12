@@ -40,7 +40,7 @@ class IndexController(
   }
 
   fun buildImageUrl(definition: QrCodeDefinition): String {
-    var url = "${config.baseUrl}/qr"
+    var url = "/qr"
     url += "?data=${UriUtils.encodeQueryParam(definition.data, Charsets.UTF_8)}"
     url += "&format=${definition.imageFormat}"
     if (definition.hasCustomErrorCorrection) {
