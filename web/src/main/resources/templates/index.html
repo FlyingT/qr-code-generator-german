@@ -266,16 +266,16 @@
 
   <form class="panels" method="get">
     <div class="panels__left">
-      <textarea class="multiline-text-input" name="data" placeholder="Enter text"
+      <textarea class="multiline-text-input" name="data" placeholder="hier Text eingeben"
                 th:text="${definition.data}"></textarea>
-      <button type="submit" class="button button-generate">Generate QR Code</button>
+      <button type="submit" class="button button-generate">QR Code erstellen</button>
 
       <div th:if="${url}" class="result">
         <a th:href="${url}">
           <img class="result__image" th:src="${url}"/>
         </a>
         <div class="result__buttons">
-          <a th:href="${url}" download class="button result__download">Download</a>
+          <a th:href="${url}" download class="button result__download">Herunterladen</a>
           <div class="input text-input result__url">
             <input id="url-input" type="text" th:value="${url}" readonly value="bbb"/>
             <div id="url-copy" data-clipboard-target="#url-input" class="input__suffix">
@@ -288,7 +288,7 @@
 
     <div class="panels__right">
       <div class="field">
-        <label>Image format</label>
+        <label>Dateiformat</label>
         <div class="input radio-input">
           <input id="image-format-low-input" type="radio" name="imageFormat" value="PNG"
                  th:checked="${definition.imageFormat == T(com.piotrjanczyk.qrcodegenerator.web.ImageFormat).PNG}"/>
@@ -300,7 +300,7 @@
       </div>
 
       <div class="field">
-        <label>Error correction</label>
+        <label>Fehlerkorrektur</label>
         <div class="input radio-input">
           <input id="error-correction-low-input" type="radio" name="errorCorrection" value="LOW"
                  th:checked="${definition.errorCorrection == T(com.piotrjanczyk.qrcodegenerator.web.ErrorCorrection).LOW}"/>
@@ -318,7 +318,7 @@
       </div>
 
       <div class="field">
-        <label for="version-input">QR Code version (1–40)</label>
+        <label for="version-input">QR Code Version (1–40)</label>
         <div class="input text-input">
           <input id="version-input" type="number" pattern="[0-9]*" min="1" step="1" max="40" name="version"
                  placeholder="auto" th:value="${definition.version}"/>
@@ -326,7 +326,7 @@
       </div>
 
       <div class="field">
-        <label for="foreground-color-input">Foreground color</label>
+        <label for="foreground-color-input">Farbe Vordergrund</label>
         <div class="input color-input">
           <input id="foreground-color-input" type="color" name="foregroundColor"
                  th:value="${definition.foregroundColor}"/>
@@ -334,7 +334,7 @@
       </div>
 
       <div class="field">
-        <label for="background-color-input">Background color</label>
+        <label for="background-color-input">Farbe Hintergrund</label>
         <div class="input color-input">
           <input id="background-color-input" type="color" name="backgroundColor"
                  th:value="${definition.backgroundColor}"/>
@@ -342,7 +342,7 @@
       </div>
 
       <div class="field">
-        <label for="box-size-input">Box size</label>
+        <label for="box-size-input">Größe Kasten</label>
         <div class="input text-input">
           <input id="box-size-input" type="number" pattern="[0-9]*" min="1" step="1" name="boxSize" placeholder="10"
                  th:value="${definition.boxSize}"/>
@@ -351,7 +351,7 @@
       </div>
 
       <div class="field">
-        <label for="border-input">Border size</label>
+        <label for="border-input">Größe Rahmen</label>
         <div class="input text-input">
           <input id="border-input" type="number" pattern="[0-9]*" min="0" step="1" name="border" placeholder="4"
                  th:value="${definition.border}"/>
