@@ -1,8 +1,4 @@
-# QR Code Generator
-
-### Demo
-
-[qrcode.piotrjanczyk.com](http://qrcode.piotrjanczyk.com/)
+# Simple QR Code Generator - Translated to German
 
 <img src="docs/screenshot.png" width="600"/>
 
@@ -24,19 +20,29 @@ Docker Compose configuration is used for deployment on AWS Elastic Container Ser
 
 [Figma project](https://www.figma.com/file/m0zkjHTBtYOHYB327GsUou/QR_Code_Generator?node-id=0%3A1)
 
-### Local development
+### How to Use
 
-All services can be run with Docker Compose:
+1. **Install Docker** if you haven't already.
+2. **Clone the Repository and build the image** using the following commands:
 
 ```bash
-docker-compose up --build
+https://github.com/FlyingT/qr-code-generator-german.git
+```
+```bash
+cd qr-code-generator-german
+```
+```bash
+docker build -t qr-code-generator-german .
+```
+```bash
+docker run -d --name qr-code-generator-german -p 3007:80 qr-code-generator-german
 ```
 
-### Deployment
-
-See [`deploy.sh`](deploy.sh) script.
-
-It builds and deploys to [qrcode.piotrjanczyk.com](http://qrcode.piotrjanczyk.com/):
-* Builds Docker images
-* Pushes them to Docker Hub
-* Deploys them to AWS ECS
+Ignore this, its just for reinstalling:
+```bash
+docker container stop qr-code-generator-german
+docker container qr-code-generator-german
+docker system prune
+cd ..
+rm -r  qr-code-generator-german
+```
