@@ -32,11 +32,10 @@ git clone https://github.com/FlyingT/qr-code-generator-german.git
 cd qr-code-generator-german
 ```
 ```bash
-docker build -t qr-code-generator-german .
+docker compose up --build -d
 ```
-```bash
-docker run -d --name qr-code-generator-german -p 3007:80 qr-code-generator-german
-```
+The Web-UI will be published on Port 3007, so go top http://[IP-of-Host]:3007 to access it
+
 
 Ignore this, its just for reinstalling:
 ```bash
