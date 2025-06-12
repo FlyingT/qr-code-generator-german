@@ -234,25 +234,12 @@
 
     .result__buttons {
       display: flex;
+      justify-content: center;
       margin-top: 24px;
     }
 
     .result__download {
       width: 100%;
-    }
-
-    .result__url {
-      margin-left: 16px;
-      width: 100%;
-      padding-right: 0;
-      color: var(--color-black);
-    }
-
-    .result__url__copy {
-      pointer-events: all;
-      color: var(--color-violet);
-      font-size: 24px;
-      cursor: pointer;
     }
   </style>
 </head>
@@ -276,12 +263,6 @@
         </a>
         <div class="result__buttons">
           <a th:href="${url}" download class="button result__download">Herunterladen</a>
-          <div class="input text-input result__url">
-            <input id="url-input" type="text" th:value="${url}" readonly value="bbb"/>
-            <div id="url-copy" data-clipboard-target="#url-input" class="input__suffix">
-              <i class="fa fa-copy result__url__copy"></i>
-            </div>
-          </div>
         </div>
       </div>
     </div>
